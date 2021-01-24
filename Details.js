@@ -21,7 +21,6 @@ export default class Details extends React.Component {
   officeDelid(cl) {
     this.setState({ isLoading: true })
     if(!this.items){
-      let _URL = 'http://cr16661-django-2.tw1.ru/api'
       axios.delete(`${_URL}/${cl}`).finally(() => this.getData())
     }
     
